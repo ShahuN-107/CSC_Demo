@@ -51,13 +51,14 @@
 <body>
 <div class="container col-md-offset-1 col-lg-offset-1 col-sm-offset-1">
     {% for key, settings in plugin_settings.items() %}
-    <div class="row">
+
     <table>
         <tr>
             <th style="width: 150px; height: 50px">Setting Name</th>
             <th style="width: 150px; height: 50px">Setting Value</th>
         </tr>
         <h3>  Plugin Name:  {{ key }}</h3>
+
         {%  for setting_name, setting_value in settings.items() %}
             <tr>
                 <td style="width: 150px; height: 50px">{{ setting_name }}</td>
@@ -66,15 +67,16 @@
         {% endfor %}
 
     </table>
-    </div>
     {% endfor %}
-<br class="container col-md-12 col-lg-12 col-sm-12">
 
-<div class="col-md-3 col-lg-3 col-sm-3">
-    <form method="POST" action="/change_settings">
-            <button class="btn btn-default btn-lg" type="submit" style="width: 200px">Edit Values</button>
-    </form>
+<div>
+<br class="container col-md-12 col-lg-12 col-sm-12">
 </div>
+
+<form method="POST" action="/change_settings">
+        <button class="btn btn-default btn-lg" type="submit" style="width: 200px">Edit Values</button>
+</form>
+
 </div>
 </body>
 </html>
