@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div>
+    <br class="container col-md-12 col-lg-12 col-sm-12">
+    <hr class="container col-md-12 col-lg-12 col-sm-12">
+    <br class="container col-md-12 col-lg-12 col-sm-12">
+    <br class="container col-md-12 col-lg-12 col-sm-12">
+</div>
+    <div class="container col-md-offset-3 col-sm-offset-3 col-lg-offset-3">
+        <h1>Shaun van Zyl: CSC 411 Demo</h1>
+    </div>
+<div class="container col-md-12 col-lg-12 col-sm-12">
+    <br class="container col-md-12 col-lg-12 col-sm-12">
+    <hr class="container col-md-12 col-lg-12 col-sm-12">
+</div>
+
+    <div class="container col-md-offset-3 col-sm-offset-3 col-lg-offset-3">
+
+        <div class="row">
+            <form method="POST" action="/select_plugin">
+                <button class="btn btn-default btn-lg" type="submit" style="width: 200px">Demo!</button>
+            </form>
+        </div>
+
+        <div class="row" style="margin-top: 2.5%">
+        <form method="POST" action="/_initialise" >
+                <button class="btn btn-default btn-lg" type="submit" style="width: 200px">Reload Database</button>
+        </form>
+        </div>
+
+    </div>
+
+
+{% if reload == True %}
+    <div class="container col-md-offset-3 col-sm-offset-3 col-lg-offset-3">
+        <h2>The reload was a success!</h2>
+    </div>
+{% endif %}
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
